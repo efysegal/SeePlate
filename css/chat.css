@@ -1,0 +1,125 @@
+.mesage_time{
+	color: #d1d5d9;
+	font-size: 12px;
+	width: 60%;
+	float: inherit;
+}
+
+.mesage_sender{
+	color: #105879;
+	font-size: 17px;
+	border-bottom: solid 1px #aeb5bd;
+	cursor: pointer;
+	width: 60%;
+	float: inherit;
+}
+
+.mesage_text{
+	color: #494949;
+	font-family: "Myriad Pro";
+	font-size: 15px;
+	font-weight: 400;
+	border-bottom: solid 1px #aeb5bd;
+	width: 60%;
+	float: inherit;
+}
+
+.mesage_recipent{
+	width: 53px;
+	height: 7px;
+	color: #aeb5bd;
+	font-family: "Myriad Pro";
+	font-size: 12px;
+	font-weight: 400;
+	cursor: pointer;
+	width: 60%;
+	float: inherit;
+}
+
+.mesage_out{
+	width: 60%;
+	float: left;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 10px;
+}
+
+.mesage_in{
+	margin-top: 10px;
+	width: 60%;
+	float: right;
+	text-align: right;
+	margin-right: 10%;
+}
+
+.send_chat_aree{
+	width: 95%;
+	max-width: 800px;
+	background-color: white;
+	border: 0px none;
+	margin-top: 2px;
+}
+
+.vip_massage_area {
+	height: 80%;
+}
+
+.vip_form_chat{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	background-color: #798d9e;
+	z-index: 99999;
+}
+
+.vip_mesage_send{
+	max-width: 800px;
+	margin: auto;
+	width: 100%;
+}
+
+#show_chat{
+	margin: auto;
+	position: relative;
+}
+
+a:focus, a:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+ .vip_title{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    color: rgb(0, 80, 115);
+    font-family: HelveticaNeueCyr;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+.vip_massage_title_vp{
+	color: rgb(0, 80, 115);
+	font-family: HelveticaNeueCyr;
+	font-size: 16px;
+	font-weight: 300;
+	text-transform: uppercase;
+
+}
+
+.vip_massage_content_vp{
+	color: rgb(60, 60, 60);
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.vip_massage_promo_vp{
+	color: #aeb5bd;
+	font-family: HelveticaNeueCyr;
+	font-size: 13px;
+	font-weight: 300;
+}

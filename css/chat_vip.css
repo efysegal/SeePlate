@@ -1,0 +1,56 @@
+.massage_time_vip {
+   color: #aeb5bd;
+   font-family: HelveticaNeueCyr;
+   font-size: 13px;
+}
+
+.massage_time_title span {
+  text-transform: uppercase;
+}
+
+.massage_time_title {
+  color: #005073;
+  font-family: HelveticaNeueCyr;
+  font-size: 15px;
+}
+
+.ms_hr_vip {
+	width: 200px;	
+	display: block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+	max-height: 1px;
+	height: 1px;
+    background-color: #aeb5bd;
+}
+
+.message_message_vip {
+    color: #3c3c3c;
+    ont-family: HelveticaNeueCyr;
+}
+
+.btn-primary-vip {
+	width: 197px;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #005073;
+border: none;
+border-radius: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
+color: #e6e6e6;
+font-family: HelveticaNeueCyr;
+font-size: 15px;
+display: block;
+text-align: center;
+}
+
+.hr_bottom_ms {
+	height: 2px;
+background-color: #005073;
+margin-top: 0px;
+}
+
+.VIP_mesage {
+	padding: 15px;
+}

@@ -1,0 +1,247 @@
+body {
+	background-color: #798d9e;
+}
+
+.container_login_form{
+	margin-top: 5%;
+}
+
+.login_form{
+	width: 320px;
+	height: 540px;
+	background-color: #798d9e;
+	text-align: center;
+	margin: auto;
+}
+
+.row{
+	margin: 0px;
+}
+
+.login_form ul{
+	padding-left: 45px;
+	padding-right: 45px;
+}
+
+.login_form li{
+	list-style-type: none;
+	margin-top: 10px;
+	border-bottom: 1px solid rgb(0, 80, 115);
+}
+
+.login_form li:hover{
+	list-style-type: disc;
+}
+
+.login_form li:focus{
+	list-style-type: disc;
+}
+
+.login_form input{
+	display: inline;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+	background-color: inherit;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	font-weight: 300;
+	list-style: none;
+}
+
+.login_form input:hover{
+	box-shadow: none;
+	color: white;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+
+.login_form input:focus{
+	box-shadow: none;
+	color: white;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.logo{
+	margin-top: 90px;
+	width: 186px;
+	height: 75px;
+	margin-bottom: 50px;
+}
+
+.btn_send_login{
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 260px;
+	height: 40px;
+	background-color: #005073;
+	border: none;
+	color: white;
+	font-family: HelveticaNeueCyr;
+	font-size: 21px;
+	font-weight: 300;
+}
+
+.go_to_reg a{
+	color: white;
+	opacity: 0.45;
+	font-family: HelveticaNeueCyr;
+	font-size: 17px;
+	font-weight: 300;
+	display: block;
+    height: 30px;
+}
+
+
+.go_to_reg a:hover{
+	text-decoration: none;
+	color: white;
+	opacity: 1;
+}
+
+.go_to_reg {
+	border-bottom: solid 1px #B5C0C9;
+	width: 120px;
+	margin: auto;
+	height: 30px;
+}
+
+.go_to_reg:hover {
+	border-bottom: solid 1px white;
+}
+
+.form-control[type="text"]::-webkit-input-placeholder {
+	color: white;
+	opacity: 0.45;
+}
+
+.form-control[type="text"]::-moz-placeholder  {
+	color: white;
+	opacity: 0.45;
+}
+
+.form-control[type="text"]:-ms-input-placeholder  {
+	color: white;
+	opacity: 0.45;
+}
+
+.form-control:hover[type="text"]::-webkit-input-placeholder {
+	color: white;
+	opacity: 1;
+}
+
+.form-control:hover[type="text"]::-moz-placeholder  {
+	color: white;
+	opacity: 1;
+}
+
+.form-control:hover[type="text"]:-ms-input-placeholder  {
+	color: white;
+	opacity: 1;
+}
+
+a:focus{ 
+outline: 0 !important; 
+}
+
+
+.mesage_area{
+    height: 50%;
+    overflow-y: scroll;
+    background-color: white;
+    width: 100%;
+	margin: auto;
+	position: fixed;
+	top: 50px;
+}
+
+.wrapper_show_chat {
+	position: fixed;
+}
+
+.chat_type{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+
+}
+
+.com_chat {
+	top: 60%;
+	height: 20%;
+	max-height: 20%;
+
+}
+
+.chat_type ul{
+	width: 350px;
+	margin: auto;
+	border: none;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	color: #005073;
+	font-family: HelveticaNeueCyr;
+	font-size: 23px;
+	font-weight: 300;
+	cursor: default;
+	background-color: #798d9e;
+	border: 0px;
+	border-bottom-color: transparent;
+}
+
+.nav-tabs > li > a {
+	border: 0px;
+	border-radius: 0px;
+	background-color: #798d9e;
+	opacity: 0.5;
+	color: white;
+	font-family: HelveticaNeueCyr;
+	font-size: 23px;
+	font-weight: 300;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	text-decoration: none;
+	background-color:  #798d9e;
+}
+
+
+.vip-info {
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	height: 50%;
+	overflow-y: scroll;
+	top: 50px;
+}
+
+.vip_title {
+	position: fixed;
+	height: 50px;
+}
+
+
+
+@media screen and (max-width: 420px) {
+	.login_form{
+		width: 100%;
+	}
+
+	.chat_type ul{
+	width: 230px;
+	}
+
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	font-size: 16px;
+	}	
+
+	.nav-tabs > li > a {
+	font-size: 16px;
+	}
+}
