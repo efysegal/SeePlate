@@ -10,7 +10,7 @@
 .btn_type {
 	width: 260px;
 	height: 40px;
-	background-color: #005073;
+	background-color: #009fa5;
 	position: relative;
 	margin: auto;
 	top: 194px;
@@ -23,9 +23,9 @@
 }
 
 .btn_type:hover {
-	opacity: 0.75;
+	opacity: 1;
 	background-color: white;
-	color: #005073;
+	color: #009fa5;
 }
 
 .btn_type a{
@@ -37,7 +37,7 @@
 }
 
  .btn_type a:hover {
-    color: #005073;
+    color: #009fa5;
 }
 
 .btn_type a {
@@ -60,14 +60,13 @@
 	max-width: 340px;
 	width: 95%;
 	color:#B40404;
-	background-color: #798d9e;
 	text-align: left;
 	padding-left: 10px;
 	padding-bottom: 10px;
 	font-size: 16;
-
-
+    margin: auto;
 }
+
 .login_form ul { 
 padding-left: 30px; 
 padding-right: 30px; 

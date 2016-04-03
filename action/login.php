@@ -1,5 +1,4 @@
 <?php
-//$dbh = new mysqli("localhost", "cchat", "123", "cchat");
 include('../inc/database.php');
 
 if ($_POST['name'] AND $_POST['passwd']) {

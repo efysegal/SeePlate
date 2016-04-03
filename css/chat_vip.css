@@ -30,20 +30,24 @@
 }
 
 .btn-primary-vip {
-	width: 197px;
-padding-top: 10px;
-padding-bottom: 10px;
-background-color: #005073;
-border: none;
-border-radius: 0px;
-margin-top: 10px;
-margin-bottom: 10px;
-color: #e6e6e6;
-font-family: HelveticaNeueCyr;
-font-size: 15px;
-display: block;
-text-align: center;
+  width: 197px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #009fa5;
+  border: none;
+  border-radius: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #e6e6e6;
+  font-family: HelveticaNeueCyr;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
 
 .hr_bottom_ms {
 	height: 2px;

@@ -1,6 +1,5 @@
 <?php 
-
-$dbh = new mysqli("localhost", "u907593807_chat", "123456", "u907593807_chat");
+include('../inc/database.php');
 session_start();
 
 $n = mysqli_query ($dbh,"SELECT COUNT(1) FROM `user_massage` "); 
@@ -12,9 +11,9 @@ $title		= $_POST['message_title_vip'];
 $message	= $_POST['message_vip'];
 $message 	= strip_tags($message);
 $message 	= addslashes($message);
-$promo	= $_POST['vip_promo'];
+$promo		= $_POST['vip_promo'];
 $mesagetime	= date('o-m-d H:i:s');
 
-mysqli_query ($dbh, "INSERT INTO `user_massage` VALUES ('$MessageID', '$userId', '$message', '$promo', '$mesagetime', FALSE, FALSE, FALSE, '$userType', '', '$title');");
+mysqli_query ($dbh, "INSERT INTO `user_massage` VALUES ('$MessageID', '$userId', '$message', '$promo', '$mesagetime', FALSE, FALSE, FALSE, '$userType', '', '$title', FALSE);");
 
  ?>
