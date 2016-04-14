@@ -44,10 +44,40 @@
         </li>
         <li>
           <input class="form-control form-field" type="text" name="address" value="" placeholder="Address">
-        </li>         
+        </li>  
+<!-- Large modal -->
+<div class="go_to_reg avatar_reg"><a  type="button" data-toggle="modal" data-target=".bs-example-modal-sm">Avatar</a></div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <?php   
+        include('inc/database.php');
+        $avatar_datta = mysqli_query ($dbh,"SELECT * FROM `avatar` WHERE id > 0");
+        foreach ($avatar_datta as $key => $value) {
+
+        $avatars[] = $value;
+        }
+        echo '<div class="row">';
+        echo '<input id="radio_ava"  class="ava_radio"  name="avatar" type="radio" value="0" checked />'; 
+        foreach ($avatars as $avatar) {
+          echo '<div class="col-xs-4">';
+          echo '<input id="radio_ava'.$avatar['id'].'"  class="ava_radio"  name="avatar" type="radio" value="'.$avatar['id'].'" />';
+          echo '<label class="ava_img" for="radio_ava'.$avatar['id'].'">';
+          echo '<img src="'.$avatar['link'].'"/></label></div>';
+        }
+        echo '</div>';
+       ?>
+    </div>
+  </div>
+</div>
       </ul>
         <button type="submit" class="btn_send_login">Sing Up</button>
       </form>
+
+
+
+</div>
       <div id="erormesage" class="error-block"></div>
     </div>
   </div>
@@ -59,7 +89,7 @@ document.getElementById('registr_user').onsubmit = function(){
   var http = new XMLHttpRequest();
   http.open("POST", "../action/action_new_user.php", true);
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  http.send("name=" + this.name.value + "&passwd=" + this.passwd.value + "&email=" + this.email.value + "&country=" + this.country.value + "&city=" + this.city.value + "&address=" + this.address.value);
+  http.send("name=" + this.name.value + "&passwd=" + this.passwd.value + "&email=" + this.email.value + "&country=" + this.country.value + "&city=" + this.city.value + "&address=" + this.address.value + "&avatar=" + this.avatar.value);
   http.onreadystatechange = function() {
    if (http.readyState == 4 && http.status == 200) {     
       $('#erormesage').html(http.responseText);
@@ -72,5 +102,7 @@ document.getElementById('registr_user').onsubmit = function(){
 }
 
 </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
  </body>
 </html>

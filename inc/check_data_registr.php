@@ -2,11 +2,11 @@
 
 function check_data_registr(){
 
-$dbh = new mysqli("localhost", "u907593807_chat", "123456", "u907593807_chat");
+include('database.php');
 
 $errorlog = '';
 
-if ( preg_match('/^[a-z0-9_]+$/i', $_POST['name']) AND iconv_strlen($_POST['name']) > 7 ) {
+if ( preg_match('/^[a-z0-9_]+$/i', $_POST['name']) ) {
 	$username = $_POST['name'];
 	$user_data = mysqli_query ($dbh, "SELECT * FROM `user` WHERE name='$username'");
 	$user_data = mysqli_fetch_array($user_data, MYSQLI_ASSOC);
@@ -19,7 +19,7 @@ if ( preg_match('/^[a-z0-9_]+$/i', $_POST['name']) AND iconv_strlen($_POST['name
 }
 else {	$username = FALSE; }
 
-if (preg_match ("/^[a-z0-9_]+$/i", $_POST['passwd']) AND iconv_strlen($_POST['passwd']) >7){
+if (preg_match ("/^[a-z0-9_]+$/i", $_POST['passwd']) ){
 	$password = $_POST['passwd'];
 }else {	$password = FALSE; }
 
@@ -46,13 +46,10 @@ if (preg_match('/^[a-z0-9]+$/i', $_POST['address'])) {
 
 
 if ($username == FALSE) {
-	$errorlog .= "<br><br>Login must be at least 8 characters long and contain only letters: a-z, 0-9, _";
+	$errorlog .= "<br>";
 }
 if ($password == FALSE) {
-	$errorlog .= "<br><br>Password must be at least 8 characters long and contain only letters: a-z, 0-9, _";
-}
-if ($email == FALSE) {
-	$errorlog .= "<br><br>Email err";
+	$errorlog .= "<br>";
 }
 
 $userdata = array(

@@ -1,3 +1,15 @@
+var chatactive = 0;
+
+$(window).focus(function() {
+  chatactive = 1;
+  check_user_reading();
+  });
+
+$(window).blur(function() {
+  chatactive = 0;
+  });
+
+
 
 	function chat_to(value) {
 
@@ -10,7 +22,12 @@
 }
 
 
-
+function check_user_reading() {
+  if (chatactive == 1) {
+    $.post("../chat/reading_msg.php", { msread: true});
+     show_chat();
+  }
+}
 
      function show_chat()
   {
@@ -58,7 +75,8 @@ var mesage_summ_check = 0;
        	var mesage_summ = data;
       
        	if (mesage_summ_check < mesage_summ) {
-
+         
+        check_user_reading();
        	show_chat();
        	mesage_summ_check = mesage_summ;
        }
@@ -84,11 +102,28 @@ var mesage_summ_check = 0;
       });
   }
 
+    var mesage_read_check = 0;
+     function chat_read_check()
+  { 
+    $.ajax({
+       url: "../chat/check_message_my_read.php",
+       cache: false,
+       success: function (data) {
+        mesage_read_check_bd = data;
+        if (mesage_read_check > mesage_read_check_bd || mesage_read_check < mesage_read_check_bd) {
+          show_chat();         
+        }
+        mesage_read_check = 0;
+       }
+      });
+  }
+
   $(document).ready(function(){
   		chat_check();
       chat_check_vip();
   		setInterval('chat_check()',1000);
       setInterval('chat_check_vip()',1000);
+      setInterval('chat_read_check()',10000);
   	}
 
   		);
@@ -123,3 +158,23 @@ var mesage_summ_check = 0;
     }
    return false;
 	}
+
+    function get_profile(user_id)  {
+  $.post("../action/action_profile.php", { userID: user_id})
+                .done(function(data) {
+                    $('#profile_data').html(data);
+                });
+  }
+
+  function massage_id_auto(message_ids)  {
+      var http = new XMLHttpRequest();
+  http.open('POST', '../chat/counter_auto.php', true);
+  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  http.send("messageID=" + message_ids);
+  http.onreadystatechange = function() {
+      if (http.readyState == 4 && http.status == 200) {
+              
+       }
+    }
+   return false;
+  }

@@ -1,8 +1,12 @@
 .mesage_time{
-	color: #d1d5d9;
-	font-size: 12px;
+	font-family: "HelveticaNeueCyr";
+    font-size: 17px;
+    color: white;
 	width: 60%;
 	float: inherit;
+	font-weight: 400;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .mesage_sender{
@@ -14,26 +18,40 @@
 	float: inherit;
 }
 
+.chat_avatar{
+	border-radius: 25px;
+	border: 1px solid #009fa5; 
+}
+
+.vip_out_message {
+	min-width: 90%;
+	margin: auto;
+}
+
+
 .mesage_text{
 	color: #494949;
 	font-family: "Myriad Pro";
 	font-size: 15px;
 	font-weight: 400;
-	border-bottom: solid 1px #aeb5bd;
-	width: 60%;
+	background: white;
+	width: 100%;
 	float: inherit;
+	padding-right: 12px;
+	padding-left: 12px;
 }
 
 .mesage_recipent{
 	width: 53px;
-	height: 7px;
 	color: #aeb5bd;
 	font-family: "Myriad Pro";
 	font-size: 12px;
 	font-weight: 400;
 	cursor: pointer;
-	width: 60%;
+	width: 100%;
 	float: inherit;
+	padding-right: 12px;
+	padding-left: 12px;
 }
 
 .mesage_out{
@@ -69,8 +87,11 @@
 	bottom: 0px;
 	width: 100%;
 	text-align: center;
-	background-color: #798d9e;
-	z-index: 99999;
+	z-index: 900;
+}
+
+.auto_message{
+	top: 90px;
 }
 
 .vip_mesage_send{
@@ -107,7 +128,8 @@ a:focus, a:hover {
 	font-size: 16px;
 	font-weight: 300;
 	text-transform: uppercase;
-
+	padding-right: 12px;
+	padding-left: 12px;
 }
 
 .vip_massage_content_vp{
@@ -122,4 +144,200 @@ a:focus, a:hover {
 	font-family: HelveticaNeueCyr;
 	font-size: 13px;
 	font-weight: 300;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+
+.mesage_vip{
+	margin-top: 10px;
+	width: 60%;
+	float: right;
+	text-align: right;
+	margin-right: 10%;
+	background-color: palegoldenrod;
+}
+
+.auto_message_vip{
+	width: 60% !important;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.avatar_btn{
+	border: none;
+	background: none;
+}
+
+.message_author_chat {
+	color: #009fa5;
+	cursor: pointer;
+}
+
+.message_text_avatar {
+	float: inherit;
+width: 70%;
+}
+
+.profile_content{
+	width: 230px;
+	margin: auto;
+	height: 320px;
+}
+
+.profile_avatar{
+	display: block;
+	margin-top: 15px !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.profile_content p{
+	color: #009fa5;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	margin-top: 15px;
+	display: block;
+	width: 200px;
+	margin: auto;
+	margin-top: 15px;
+	border-bottom: solid 1px #009fa5;
+}
+
+.avatar_my{
+	width: 60px;
+	float: right;
+	margin-top: 20px;
+}
+
+.avatar_my_out{
+	width: 60px;
+	float: left;
+	margin-top: 20px;
+}
+
+.avatar_my_out img{
+	border-radius: 25px;
+	border: 1px solid #009fa5;
+}
+
+.message_text_avatar{
+	background: white;
+	width: 60%;
+	float: inherit;
+	border-bottom-left-radius: 10px;
+	position: relative;
+	right: 10px;
+}
+
+.message_text_avatar:before{ 
+    content: '';
+    position:absolute; right:-10px; top:5px; 
+    display:block;
+    width: 0px;
+    height: 0px;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+
+.message_text_avatar_out{
+	background: white;
+	width: 60%;
+	float: inherit;
+	border-bottom-right-radius: 10px;
+	position: relative;
+	left: 10px;
+	padding-bottom: 5px;
+}
+
+.message_text_avatar_out:before{ 
+    content: '';
+    position:absolute; left:-10px; top:5px;
+    display:block;
+    width: 0px;
+    height: 0px;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff;
+}
+
+.message_chat_line {
+	background: black;
+	width: 96%;
+	height: 1px;
+	float: inherit;
+	opacity: 0.4;
+	margin-left: 2%;
+    margin-right: 2%;
+}
+
+.lable_vip{
+	position: absolute;
+	color: rgb(0, 159, 165);
+	font-family: Georgia;
+	font-size: 20px;
+	font-weight: 700;
+	border: 2px solid rgb(0, 159, 165);
+	width: 26px;
+	height: 26px;
+	text-align: center;
+	line-height: 21px;
+	border-radius: 15px;
+	top: 7px;
+	left: 7px;
+}
+
+.message_time_vip {
+	width: 100%;
+	color: #aeb5bd;
+}
+
+.vip_message_auto_in{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.message_promo{
+	text-align: center;
+	float: inherit;
+	width: 100%;
+}
+
+
+.out_no_read{
+	display: none;
+}
+.in_no_read{
+	display: none;
+}
+
+.out_read{
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	width: 10px;
+	height: 8px;
+}
+
+.in_read{
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	width: 10px;
+	height: 8px;
+}
+
+.pattern {
+	background-image: url('../img/pattern.png');
+	height: 100%;
+
+}
+
+@media screen and (max-width: 480px) {
+	.mesage_in{
+		width: 90%;
+	}
+	.mesage_out{
+		width: 90%;
+	}
 }

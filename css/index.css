@@ -1,5 +1,14 @@
 body {
-	background-color: #798d9e;
+height: 100%;
+background: #ffd4b5; /* Old browsers */
+background: -moz-linear-gradient(top, #ffd4b5 0%, #8ea2fb 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffd4b5 0%,#8ea2fb 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffd4b5 0%,#8ea2fb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4b5', endColorstr='#8ea2fb',GradientType=0 ); /* IE6-9 */
+}
+
+.index_chat{
+	height: 100%;
 }
 
 .container_login_form{
@@ -8,8 +17,6 @@ body {
 
 .login_form{
 	width: 320px;
-	height: 540px;
-	background-color: #798d9e;
 	text-align: center;
 	margin: auto;
 }
@@ -26,7 +33,8 @@ body {
 .login_form li{
 	list-style-type: none;
 	margin-top: 10px;
-	border-bottom: 1px solid rgb(0, 80, 115);
+	border-bottom: 1px solid #009fa5;
+	color: #009fa5;
 }
 
 .login_form li:hover{
@@ -68,8 +76,8 @@ body {
 
 .logo{
 	margin-top: 90px;
-	width: 186px;
-	height: 75px;
+	width: 136px;
+	height: 155px;
 	margin-bottom: 50px;
 }
 
@@ -78,7 +86,7 @@ body {
 	margin-bottom: 35px;
 	width: 260px;
 	height: 40px;
-	background-color: #005073;
+	background-color: #009fa5;
 	border: none;
 	color: white;
 	font-family: HelveticaNeueCyr;
@@ -86,8 +94,14 @@ body {
 	font-weight: 300;
 }
 
+.btn_send_login:hover{
+	opacity: 1;
+	background-color: white;
+	color: #009fa5;
+}
+
 .go_to_reg a{
-	color: white;
+	color: #009fa5;
 	opacity: 0.45;
 	font-family: HelveticaNeueCyr;
 	font-size: 17px;
@@ -99,48 +113,56 @@ body {
 
 .go_to_reg a:hover{
 	text-decoration: none;
-	color: white;
+	color: #009fa5;
 	opacity: 1;
 }
 
 .go_to_reg {
-	border-bottom: solid 1px #B5C0C9;
+	border-bottom: solid 1px #5faadb;
 	width: 120px;
 	margin: auto;
 	height: 30px;
 }
 
 .go_to_reg:hover {
-	border-bottom: solid 1px white;
+	border-bottom: solid 1px #009fa5;
+}
+
+.avatar_reg{
+	margin-top: 20px;
+	width: 65px;
+}
+.avatar_reg a{
+	font-size: 20px;
 }
 
 .form-control[type="text"]::-webkit-input-placeholder {
-	color: white;
-	opacity: 0.45;
+	opacity: 0.6;
+	color: #465252;
 }
 
 .form-control[type="text"]::-moz-placeholder  {
-	color: white;
-	opacity: 0.45;
+	opacity: 0.6;
+	color: #465252;
 }
 
 .form-control[type="text"]:-ms-input-placeholder  {
-	color: white;
-	opacity: 0.45;
+	opacity: 0.6;
+	color: #465252;
 }
 
 .form-control:hover[type="text"]::-webkit-input-placeholder {
-	color: white;
+	color: #009fa5;
 	opacity: 1;
 }
 
 .form-control:hover[type="text"]::-moz-placeholder  {
-	color: white;
+	color: #009fa5;
 	opacity: 1;
 }
 
 .form-control:hover[type="text"]:-ms-input-placeholder  {
-	color: white;
+	color: #009fa5;
 	opacity: 1;
 }
 
@@ -152,7 +174,7 @@ outline: 0 !important;
 .mesage_area{
     height: 50%;
     overflow-y: scroll;
-    background-color: white;
+    background-color: none;
     width: 100%;
 	margin: auto;
 	position: fixed;
@@ -164,10 +186,11 @@ outline: 0 !important;
 }
 
 .chat_type{
-	height: 50px;
+	height: 53px;
 	width: 100%;
 	position: fixed;
-
+	background-color: rgb(0, 159, 165);
+	z-index: 90;
 }
 
 .com_chat {
@@ -185,14 +208,16 @@ outline: 0 !important;
 
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-	color: #005073;
+	color: white;
 	font-family: HelveticaNeueCyr;
 	font-size: 23px;
 	font-weight: 300;
 	cursor: default;
-	background-color: #798d9e;
 	border: 0px;
 	border-bottom-color: transparent;
+	opacity: 1;
+	text-decoration: underline;
+	background-color: rgb(0, 159, 165);
 }
 
 .nav-tabs > li > a {
@@ -204,6 +229,7 @@ outline: 0 !important;
 	font-family: HelveticaNeueCyr;
 	font-size: 23px;
 	font-weight: 300;
+	background-color: rgb(0, 159, 165);
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
@@ -213,7 +239,7 @@ outline: 0 !important;
 
 
 .vip-info {
-	background-color: white;
+	background-color: none;
 	width: 100%;
 	position: fixed;
 	height: 50%;
@@ -226,6 +252,35 @@ outline: 0 !important;
 	height: 50px;
 }
 
+.ava_radio{
+	display: none !important;
+}
+
+label img{
+	border: 2px solid #333333;
+	margin: 5px;
+}
+
+.ava_radio:checked + label img
+{
+    border: 2px solid red;
+}
+
+.log_out{
+	position: fixed;
+	top: 5px;
+	right: 15px;
+	color: white;
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	font-weight: 300;
+	opacity: 0.7;
+	z-index: 500;
+}
+
+.log_out:hover{
+	opacity: 1;
+}
 
 
 @media screen and (max-width: 420px) {
